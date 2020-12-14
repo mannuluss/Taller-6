@@ -1,0 +1,14 @@
+.header{
+    background-color: rgb(96, 96, 255);
+    align-items: baseline;
+    padding-left: 50px;
+    height: 80px;
+    font-size: 50px;
+}
+.navbar button{
+    margin: 50px;
+}
+table{
+    background-color: lawngreen;
+    grid
+}
