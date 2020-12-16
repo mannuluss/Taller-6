@@ -7,8 +7,24 @@
 </head>
 <body>
     <div class="header">
-        <form action="updateGrid">
+        <form>
+            <label>nombre y apellido</label>
+            <input type="text" name="name">
 
+            <label>birthday</label>
+            <input type="text" name="fecha">
+
+            <label>correo</label>
+            <input type="text" name="email">
+
+            <label>usuario</label>
+            <input type="text" name="user" onchange="validateUser()">
+
+            <label>password</label>
+            <input type="text" name="name">
+
+            <label>password</label>
+            <input type="text" name="name" onchange="validatePass()">
         </form>
         <button type="submit" onclick="registro()">Registro</button>
     </div>
@@ -27,6 +43,15 @@
 
 
 <script>
+function Send(){
+
+}
+function validateUser(){
+    
+}
+function validatePass(){
+    
+}
 function updateGrid(){
     $('table').add('<tr>');
     
