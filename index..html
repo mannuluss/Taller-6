@@ -3,7 +3,8 @@
 <head>
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-    <title>Document</title>
+    <script src="behaviour.js"></script>
+    <title>Taller 6</title>
 </head>
 <body>
     <div class="header">
@@ -12,48 +13,71 @@
             <input type="text" name="name">
 
             <label>birthday</label>
-            <input type="text" name="fecha">
+            <input id='fecha' type="date" name="fecha" onchange="birthday()">
+            <label>Edad: <label id="edad">--</label> </label>
 
             <label>correo</label>
             <input type="text" name="email">
 
             <label>usuario</label>
-            <input type="text" name="user" onchange="validateUser()">
+            <input type="text" name="user" onchange="validateUser('user')">
 
             <label>password</label>
-            <input type="text" name="name">
+            <input type="text" name="password" onchange="validatePass('password','corpassword')">
 
-            <label>password</label>
-            <input type="text" name="name" onchange="validatePass()">
+            <label>Confirmar password</label>
+            <input type="text" name="corpassword" onchange="validatePass('password','corpassword')">
+
+            <div>
+                <label>Ha sufrido de enfermedades?</label>
+                <input type="checkbox" id="sufrido" onclick="enfermedad()">
+            </div>
+    
+            <div id="contajioso" style="display: none;">
+                <label>enfermedades contajiosas?</label>
+                <input type="checkbox" id="ctj" onclick="contajioso()">
+            </div>
+            
+            <div id="cuales" style="display: none;">
+                <label>cuales?</label>
+                <input name="cuales" type="text" placeholder="cuales....">
+            </div>
+        
+            <button type="button" onclick="registro()">Registro</button>
         </form>
-        <button type="submit" onclick="registro()">Registro</button>
+        
+        
+        
+        
     </div>
     <button onclick="updateGrid()">Update</button>
-    <table>
-        <tr>
-            <th>id</th>
-            <th>Name</th>
-            <th>NameUser</th>
-            <th>email</th>
-            <th>address</th>
-        </tr>
-    </table>
+    <div>
+        <div>
+            <img src="filter.png" width="50px">
+            <select id="filtrado" onchange="filterSearch('data-f','#search','#filtrado')">
+                <option value="id">ID</option>
+                <option value="name">Name</option>
+                <option value="user">User</option>
+            </select>
+            <input type="search" id="search" onchange="filterSearch('data-f','#search','#filtrado')">
+        </div>
+        
+        <table>
+            <tr id="header">
+                <th>id</th>
+                <th>Name</th>
+                <th>NameUser</th>
+                <th>email</th>
+                <th>address</th>
+            </tr>
+        </table>
+    </div>
+    
+
 </body>
 </html>
 
 
 <script>
-function Send(){
 
-}
-function validateUser(){
-    
-}
-function validatePass(){
-    
-}
-function updateGrid(){
-    $('table').add('<tr>');
-    
-}
 </script>

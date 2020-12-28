@@ -1,14 +1,42 @@
 .header{
     background-color: rgb(96, 96, 255);
-    align-items: baseline;
-    padding-left: 50px;
-    height: 80px;
-    font-size: 50px;
-}
-.navbar button{
-    margin: 50px;
+    align-items: center;
+    font-size: 20px;
+    padding: 50px;
+    margin-bottom: 10px;
 }
 table{
-    background-color: lawngreen;
-    grid
+    border-collapse: collapse;
+    margin: 15px;
+}
+table tr#header{
+    color:white;
+    border-style: solid;
+}
+td, tr, th,tbody{
+    padding: 10px;
+    background-color:  rgb(79, 80, 79);
+    color:white;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-bottom: blanchedalmond;
+    border-top: blanchedalmond;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+input,select{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+button{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(2, 252, 106);
 }
